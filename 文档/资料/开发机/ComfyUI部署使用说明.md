@@ -6,7 +6,7 @@
 
 ## 1. 概述 <a id="intro"></a>
 
-ComfyUI 是一个**节点式（node-based）**的本地图像生成工具：把提示词、模型、采样器、VAE、放大等画成一张张可连线的节点图（工作流），连好后一键运行，底层的 Stable Diffusion / FLUX 等模型在本地 GPU 上完成生成。它既是一个面向人的可视化界面（Web UI，浏览器操作），也提供 HTTP API，可被脚本或 AI Agent 调用（本项目后续或将其用于 AI 生图能力，见《[AI能力](../../设计/概要设计/35_概要设计_AI能力.md)》）。
+ComfyUI 是一个**节点式（node-based）**的本地图像生成工具：把提示词、模型、采样器、VAE、放大等画成一张张可连线的节点图（工作流），连好后一键运行，底层的 Stable Diffusion / FLUX 等模型在本地 GPU 上完成生成。它既是一个面向人的可视化界面（Web UI，浏览器操作），也提供 HTTP API，可被脚本或 AI Agent 调用（本项目后续或将其用于 AI 生图能力，见平台《概要设计 34 AI能力》）。
 
 本机用它做**本地文生图 / 图生图**，全程离线、免费、无 API Key，数据不离开本机。
 
@@ -27,8 +27,8 @@ ComfyUI 是一个**节点式（node-based）**的本地图像生成工具：把�
 | 项 | 值 |
 | --- | --- |
 | 主机 | mjpc（开发机；内网 IP 见《[本地资源](../../用户文档/本地资源.md)》） |
-| 系统 | Ubuntu 26.04.1 LTS（resolute），x86_64，内核 7.0.0-30-generic |
-| GPU | NVIDIA GeForce RTX 4090，显存 24564 MiB，驱动 595.84（CUDA 13.0） |
+| 系统 | Ubuntu 26.04.1 LTS（resolute），x86_64，内核 7.0.0-31-generic |
+| GPU | NVIDIA GeForce RTX 4090，显存 24564 MiB，驱动 595.91.07（CUDA 13.0） |
 | 内存 | 64 GB |
 | 磁盘 | 单块 NVMe 3.7 TB，剩余约 3.4 TB |
 | Python | venv 内 Python 3.14.4（系统 `/usr/bin/python3` 同为 3.14.4） |
@@ -90,7 +90,7 @@ cat comfyui_version.py    # __version__ = "0.34.0"
 cd ~/develop/ComfyUI
 # 建 venv（Python 3.14）
 uv venv --python 3.14 venv
-# 先装带 CUDA 的 torch（cu130 对应 RTX 4090 / 驱动 595.84 / CUDA 13.0）
+# 先装带 CUDA 的 torch（cu130 对应 RTX 4090 / 驱动 595.91.07 / CUDA 13.0）
 uv pip install --python venv/bin/python \
   torch torchvision torchaudio \
   --index-url https://download.pytorch.org/whl/cu130
@@ -283,7 +283,7 @@ tr '\0' '\n' < /proc/$PID/environ | grep HF_ENDPOINT   # 应输出 https://hf-mi
 git config --global --get-regexp '^url\..*\.insteadof'
 ```
 
-> **注意**：git 全局重写只针对 `https://github.com/`，不影响 BMS 仓库——它推的是内网 GitLab（非 github.com）。ComfyUI-Manager 的节点列表刷新仍走 `raw.githubusercontent.com`（`channel_url`，不在本次范围），如刷新慢可单独处理。
+> **注意**：git 全局重写只针对 `https://github.com/`，不影响本项目仓库——它推的是内网 GitLab（非 github.com）。ComfyUI-Manager 的节点列表刷新仍走 `raw.githubusercontent.com`（`channel_url`，不在本次范围），如刷新慢可单独处理。
 
 ## 7. 命令行工具（comfy-cli） <a id="cli"></a>
 

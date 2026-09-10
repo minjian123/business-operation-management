@@ -25,7 +25,6 @@
 biz/
 ├── README.md                 # 本文件
 ├── LICENSE                   # MIT 许可
-├── AGENTS.md                 # AI 协作约定
 ├── deploy/                   # 部署配置
 │   └── .env.example          # 凭据模板
 ├── ops/                      # 运维脚本（后续阶段填充）

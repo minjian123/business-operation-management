@@ -233,3 +233,6 @@ node_modules/
 
 # graphify 运行时状态
 graphify-out/
+
+# 基座同步基线（由 bms base-sync.py --apply 写入，不入库）
+文档/.base-sync-baseline.json

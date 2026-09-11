@@ -52,7 +52,7 @@
 <script src="vendor/element-plus.min.js"></script>
 <script src="vendor/zh-cn.js"></script>
 <script>
-  // 公共组件：系统信息（label 上方三列只读栅格，见《布局设计-表单页》2.1.1）
+  // 公共组件：系统信息（label 上方三列只读栅格，见《布局设计-表单页》「系统信息布局」节）
   // 数据协议：父页 postMessage({type:'sys-info', data:{id,version,createdAt,createdBy,updatedAt,updatedBy,formKey,formLabel}})
   // 高度协议：自适应上报 {type:'sys-info-height', height}——初始渲染、每次数据更新、窗口 resize 后均重报，父页据此调整 iframe 高度
   var { createApp, reactive, nextTick } = Vue;

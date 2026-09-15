@@ -230,6 +230,3 @@ temp/
 
 # Node 依赖（根目录不装依赖；前端依赖在各前端项目自己的目录内）
 node_modules/
-
-# graphify 运行时状态（工作区级图谱在工作区根；本仓库本地运行产物同样忽略）
-graphify-out/

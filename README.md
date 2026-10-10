@@ -25,7 +25,9 @@
 biz/
 ├── README.md                 # 本文件
 ├── LICENSE                   # MIT 许可
+├── renovate.json             # Renovate 配置（CI 依赖自动升级已停用）
 ├── bms文档/                  # 符号链接 → ../bms/bms文档（基座权威源，并排引用）
+├── mdm文档/                  # 符号链接 → ../mdm/mdm文档（主数据文档互引）
 ├── deploy/                   # 部署配置
 │   └── .env.example          # 凭据模板
 ├── ops/                      # 运维脚本（后续阶段填充）

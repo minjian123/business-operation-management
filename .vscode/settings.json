@@ -2,5 +2,7 @@
   // bms文档 为仓库根的基座软链（→ ../bms/bms文档），内容随 bms 仓库展示，此处隐藏避免重复
   "files.exclude": {
     "bms文档": true
-  }
+  },
+  // 行尾统一 LF（口径同 .gitattributes / .editorconfig）
+  "files.eol": "\n"
 }

@@ -22,7 +22,7 @@
 | --- | --- | --- |
 | 后端语言/框架 | bms 平台 | Python 3.14 / FastAPI / SQLAlchemy 2.0 异步 / Alembic（产品服务按平台服务同构分层与骨架） |
 | 前端 | bms 平台 | Vue 3 + Vite + TypeScript（Element Plus / Vant 双工程），业务页面 Views 目录 |
-| 数据层 | bms 平台 | MySQL / PostgreSQL / 达梦 DM8 三库、Redis、MinIO、RocketMQ、ES、Milvus |
+| 数据层 | bms 平台 | MySQL / PostgreSQL / 达梦 DM8 三库、Redis、MinIO、msg、ES、Milvus |
 | 平台能力 | bms 平台 | 认证/SSO、RBAC、租户、文件、通知、工作流、报表、审计、i18n、任务、事件、开放接口（服务化形态以地基服务提供，见 bms《平台可扩展性规划》「平台能力清单」节与《微服务演进规划》） |
 | 业务域 | 本仓库 | 各板块业务域（见第 3 节全景）的业务模型、API、页面、流程与种子 |
 
